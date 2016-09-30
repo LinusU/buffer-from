@@ -1,6 +1,6 @@
 # Buffer From
 
-A ponyfill for `Buffer.from`, uses native implementation if available.
+A [ponyfill](https://ponyfill.com) for `Buffer.from`, uses native implementation if available.
 
 ## Installation
 

@@ -1,4 +1,6 @@
-var isArrayBuffer = require('is-array-buffer-x')
+function isArrayBuffer (val) {
+  return val && val instanceof ArrayBuffer
+}
 
 var isModern = (
   typeof Buffer.alloc === 'function' &&

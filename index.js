@@ -1,5 +1,5 @@
 function isArrayBuffer (val) {
-  return val && val instanceof ArrayBuffer
+  return Boolean(val && val instanceof ArrayBuffer)
 }
 
 var isModern = (

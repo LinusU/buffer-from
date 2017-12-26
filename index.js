@@ -1,5 +1,9 @@
 function isArrayBuffer (val) {
-  return Boolean(val && val instanceof ArrayBuffer)
+  function actualType (obj) {
+    var text = obj.constructor.toString()
+    return text.match(/function (.*)\(/)[1]
+  }
+  return Boolean(val && actualType(val) === 'ArrayBuffer')
 }
 
 var isModern = (

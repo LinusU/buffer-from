@@ -1,7 +1,7 @@
 function isArrayBuffer (val) {
   function actualType (obj) {
     var text = obj.constructor.toString()
-    return text.match(/function (.*)\(/)[1]
+    return text.substring(9, text.indexOf('('))
   }
   return Boolean(val && actualType(val) === 'ArrayBuffer')
 }

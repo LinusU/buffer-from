@@ -1,4 +1,10 @@
-var isArrayBuffer = require('is-array-buffer-x')
+function isArrayBuffer (val) {
+  function actualType (obj) {
+    var text = obj.constructor.toString()
+    return text.substring(9, text.indexOf('('))
+  }
+  return Boolean(val && actualType(val) === 'ArrayBuffer')
+}
 
 var isModern = (
   typeof Buffer.alloc === 'function' &&

@@ -1,6 +1,6 @@
 {
   "name": "buffer-from",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": "LinusU/buffer-from",
   "scripts": {

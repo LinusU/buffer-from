@@ -1,10 +1,14 @@
-var isArrayBuffer = require('is-array-buffer-x')
+var toString = Object.prototype.toString
 
 var isModern = (
   typeof Buffer.alloc === 'function' &&
   typeof Buffer.allocUnsafe === 'function' &&
   typeof Buffer.from === 'function'
 )
+
+function isArrayBuffer (input) {
+  return toString.call(input).slice(8, -1) === 'ArrayBuffer'
+}
 
 function fromArrayBuffer (obj, byteOffset, length) {
   byteOffset >>>= 0

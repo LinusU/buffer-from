@@ -1,3 +1,5 @@
+/* eslint-disable node/no-deprecated-api */
+
 var toString = Object.prototype.toString
 
 var isModern = (

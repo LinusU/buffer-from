@@ -2,6 +2,10 @@
 
 var toString = Object.prototype.toString
 
+if (typeof Buffer === 'undefined') {
+  global.Buffer = require('buffer').Buffer
+}
+
 var isModern = (
   typeof Buffer.alloc === 'function' &&
   typeof Buffer.allocUnsafe === 'function' &&

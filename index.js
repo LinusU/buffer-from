@@ -3,6 +3,7 @@
 var toString = Object.prototype.toString
 
 var isModern = (
+  typeof Buffer !== 'undefined' &&
   typeof Buffer.alloc === 'function' &&
   typeof Buffer.allocUnsafe === 'function' &&
   typeof Buffer.from === 'function'

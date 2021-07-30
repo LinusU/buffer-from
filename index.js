@@ -9,6 +9,10 @@ var isModern = (
   typeof Buffer.from === 'function'
 )
 
+if (typeof Buffer.from === 'function') {
+  try { Buffer.from('x', 'utf8') } catch (_) { isModern = false }
+}
+
 function isArrayBuffer (input) {
   return toString.call(input).slice(8, -1) === 'ArrayBuffer'
 }
